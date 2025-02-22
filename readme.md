@@ -12,7 +12,7 @@ Artykuł przedstawia ewolucję programowalnych płytek w kontekście zmian rynko
 
 Wczesne komputery _(np. **IBM**)_ oraz późniejsze mikrokomputery _(np. **Raspberry Pi**)_, przeznaczone do pracy z systemami operacyjnymi, oraz ukłafy **FPGA**, także mogą być uznawane za płyty ewaluacyjne i niewątpliwie stanowią część systemów wbudowanych. W niniejszym artykule pominięto jednak ten temat, aby skupić się wyłącznie na mikrokontrolerach.
 
-[^1]: L. Gomes, **Programmable logic devices supporting embedded system design curriculum**, IEEE Micro, 2006, DOI: 10.1109/IECON.2005.1569241
+[^1]: L. Gomes, **Programmable logic devices supporting embedded system design curriculum**, IEEE Micro, 2006, DOI:  10.1109/IECON.2005.1569241
 [^2]: K. Raghu Raghunathan, **History of Microcontrollers: First 50 Years**, IEEE Micro, 2021, `10.1109/MM.2021.3114754`
 
 ### Narodziny Mikroprocesorów
@@ -37,7 +37,7 @@ W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane ukła
 
 W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako narzędzia do nauki czy eksperymentowania, ale jako kluczowe narzędzia mające na celu usprawnienie realizacji konkretnych projektów inżynieryjnych, a ich funkcjonalność była zbliżona do samego mikrokontrolera.
 
-[^3]: F. Faggin, M. Hoff, S. Mazor, M. Shima, **The history of the 4004**, IEEE Micro, 1996, `DOI: 10.1109/40.546561`
+[^3]: F. Faggin, M. Hoff, S. Mazor, M. Shima, **The history of the 4004**, IEEE Micro, 1996, `DOI:  10.1109/40.546561`
 
 ### Wczesny rozwój techniki mikroprocesorowej
 
@@ -64,7 +64,7 @@ W ślad za Intelem inni producenci również wprowadzili własne płyty dewelope
 
 Jednak żadna z nich nie osiągnęła tak dużego sukcesu jak SDK-85, głównie z powodu późniejszego wejścia na rynek. Intel zaprezentował SDK-85 już w 1976 roku, a w 1980 roku udoskonaloną wersję **SDK-86**, wspierającą systemy operacyjne. Konkurencyjne rozwiązania pojawiły się później, co znacząco ograniczyło ich rynkową przewagę.
 
-[^4]: J. C. Rieth, **A Microprocessor Managed Shipboard Tank Level Indicator System**, Naval Postgraduate School, 1980, `DOI: 10.1109/40.546561`
+[^4]: J. C. Rieth, **A Microprocessor Managed Shipboard Tank Level Indicator System**, Naval Postgraduate School, 1980, `DOI:  10.1109/40.546561`
 
 ### Początki język C oraz IDE
 
@@ -76,15 +76,15 @@ Pierwsi inżynierowie systemów wbudowanych oczekiwali narzędzi umożliwiający
 
 Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój oprogramowania, zapewniając zarówno niskopoziomową kontrolę nad sprzętem, jak i przenośność kodu między różnymi architekturami [^7]. Dzięki swojej efektywności, elastyczności oraz ugruntowanej pozycji jako pierwszego szeroko stosowanego języka w tej dziedzinie, C pozostaje dominującym standardem w programowaniu mikrokontrolerów.
 
-[^5]: M. Beach, C. Hills, **C51 Primer**, Springer, 1996, `ISBN:9783642047985, 364204798X`
-[^6]: M.A. Koslowski, G.B. Borba, **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**, Intertech Conference Proceedings, 2014, `DOI:10.14684/intertech.13.2014.100-104` 
-[^7]: TW Schultz, T Schultz, **C and the 8051**, Springer, 2003, `ISBN:9783540204091, 3540204091`
+[^5]: M. Beach, C. Hills, **C51 Primer**, Springer, 1996, `ISBN: 9783642047985, 364204798X`
+[^6]: M.A. Koslowski, G.B. Borba, **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**, Intertech Conference Proceedings, 2014, `DOI: 10.14684/intertech.13.2014.100-104` 
+[^7]: TW Schultz, T Schultz, **C and the 8051**, Springer, 2003, `ISBN: 9783540204091, 3540204091`
 
 ### Dalszy rozwój mikroprocesorów
 
 W połowie lat 80. wyraźnie ukształtował się podział między mikroprocesorami **CPU** a mikrokontrolerami **MPU**. Mikroprocesory rozwijano z myślą o komputerach osobistych i systemach operacyjnych, podczas gdy mikrokontrolery integrowały w jednym układzie scalonym coraz więcej peryferiów, takich jak przetworniki **ADC** i **DAC**, komparatory, interfejsy **SPI**, **UART** i **I²C**, a także zaawansowane układy taktowania z pętlą **PLL** (_tab. 1_). Obecnie wiele z tych funkcji stało się standardem i jest integrowanych w większości konstrukcji **MPU** ogólnego przeznaczenia, eliminując potrzebę stosowania wielu zewnętrznych komponentów, także na płytach demonstracyjnych.
 
-Do pracy z "pełnoprawnymi" mikrokontrolerami przeznaczone były m.in. płyty z serii **PICDEM** _(rys. 4a)_ od Microchip oraz **STK500** _(rys. 4b)_ dla układów **AVR** firmy Atmel . Skierowane głównie do profesjonalistów oraz studentów uczelni technicznych zajmujących się systemami wbudowanymi, oferowały szeroki zestaw interfejsów, złącz oraz elementów testowych, takich jak diody LED, przyciski, potencjometry, buzzery, wyświetlacze oraz obszar do prototypowania, co umożliwiało szybkie wdrażanie i testowanie nowych rozwiązań. Dzięki zastosowaniu podstawek pozwalały na pracę z różnymi modelami mikrokontrolerów, zapewniając elastyczność w doborze układów. Płyty te stanowiły reprezentatywny przykład rozwiązań swojej epoki, odgrywając istotną rolę w edukacji oraz profesjonalnym rozwoju systemów wbudowanych.
+Do pracy z "pełnoprawnymi" mikrokontrolerami przeznaczone były m.in. płyty z serii **PICDEM**[^8] _(rys. 4a)_ od Microchip oraz **STK500**[^9] _(rys. 4b)_ dla układów **AVR** firmy Atmel . Skierowane głównie do profesjonalistów oraz studentów uczelni technicznych zajmujących się systemami wbudowanymi, oferowały szeroki zestaw interfejsów, złącz oraz elementów testowych, takich jak diody LED, przyciski, potencjometry, buzzery, wyświetlacze oraz obszar do prototypowania, co umożliwiało szybkie wdrażanie i testowanie nowych rozwiązań. Dzięki zastosowaniu podstawek pozwalały na pracę z różnymi modelami mikrokontrolerów, zapewniając elastyczność w doborze układów. Płyty te stanowiły reprezentatywny przykład rozwiązań swojej epoki, odgrywając istotną rolę w edukacji oraz profesjonalnym rozwoju systemów wbudowanych.
 
 ![rys.4](img/90-devboards.png)
 > **Rysunek 4.** Płyty rozwojowe (a) Microchip PICDEM 2 (b) Atmel STK500
@@ -93,22 +93,26 @@ Wykorzystywały dedykowane interfejsy programowania **ICSP** _(Microchip)_, **IS
 
 Wraz z pojawieniem się pierwszych zaawansowanych edytorów o modułowej architekturze _(umożliwiających integrację własnych rozwiązań)_, producenci mikrokontrolerów tamtego okresu postanowili je wykorzystać. Microchip dostosował **NetBeans**, tworząc **MPLAB**, natomiast Atmel oparł swoje środowisko na **Visual Studio**, rozwijając **AVR Studio** _(rys. X)_, które później ewoluowało w Atmel Studio. Pomimo dużego wsparcia nigdy nie osiągnęły takiej popularności jak wcześniejsze i późniejsze rozwiązania.
 
-Choć mikrokontrolery **AVR** oraz **PIC** idealnie odpowiadały na potrzeby rynku, szybko dostrzeżono, że bardziej efektywnym podejściem jest rozdzielenie rozwoju rdzenia, licencjonowanego przez **ARM**, od projektowania układów peryferyjnych przez producentów mikrokontrolerów. Model ten przyczynił się do rosnącej dominacji procesorów **ARM** pod koniec XX wieku, gdy mikrokontrolery zyskiwały coraz większe znaczenie w przemyśle. Pierwsze układy oparte na architekturze **ARM7** łączyły wysoką wydajność z energooszczędnością. Wśród pionierów znalazły się **LPC2000** od Philipsa _(obecnie NXP)_ z płytą **LPC-P2148** _(rys. 5)_ od Olimex oraz seria **STR7** od STMicroelectronics, które zapoczątkowały erę **32-bit**owych mikrokontrolerów.
+Choć mikrokontrolery **AVR** oraz **PIC** idealnie odpowiadały na potrzeby rynku, szybko dostrzeżono, że bardziej efektywnym podejściem jest rozdzielenie rozwoju rdzenia, licencjonowanego przez **ARM**, od projektowania układów peryferyjnych przez producentów mikrokontrolerów. Model ten przyczynił się do rosnącej dominacji procesorów **ARM** pod koniec XX wieku, gdy mikrokontrolery zyskiwały coraz większe znaczenie w przemyśle. Pierwsze układy oparte na architekturze **ARM7** łączyły wysoką wydajność z energooszczędnością. Wśród pionierów znalazły się **LPC2000** od Philipsa _(obecnie NXP)_ z płytą **LPC-P2148**[^10] _(rys. 5)_ od Olimex oraz seria **STR7** od STMicroelectronics, które zapoczątkowały erę **32-bit**owych mikrokontrolerów.
 
 ![rys.5](img/LPC-P2148.png)
 > **Rysunek 5.** Płyta rozwojowa LPC-P2148 z mikroprocesorem LPC2000
 
+[^8]: M. P. Bates, **Programming 8-bit PIC Microcontrollers in C: with Interactive Hardware Simulation**, Newnes, 2008, `ISBN: 9780080560144, 0080560148`
+[^9]: D.P. Upadyshev; O.P. Razumeiko, **Disk for studying microcontrollers**, IEEE Micro, `DOI: 10.1109/SPCMTT.2008.4897492`
+[^10]: A. Kommu, R. Rao, **Designing a learning platform for the implementation of serial standards using ARM microcontroller LPC2148**, IEEE Micro, 2014, `DOI: 10.1109/ICRAIE.2014.6909185`
+
 ### Minimalizm i otwarte standardy
 
-Na początku XXI wieku, wraz z pojawieniem się platformy **Arduino** _(rys. 6a)_, zmieniło się podejście do projektowania płyt ewaluacyjnych. Nowa koncepcja zakładała minimalizację kosztów poprzez ograniczenie liczby komponentów na płytach rozwojowych, co zwiększyło ich dostępność dla szerokiego grona użytkowników, dzięki redukcji bariery wejścia poprzez dedykowane IDE, wsparcie jedynie wybranych mikrokontrolerów, a także wysokiej jakości dokumentacji i materiałów dodatkowych. Efektem tego był rozwój aktywnej społeczności, której zaangażowanie w tworzenie nowych rozwiązań dodatkowo napędzało dalszy rozwój platformy.
+Na początku XXI wieku, wraz z pojawieniem się platformy **Arduino** _(rys. 6a)_, zmieniło się podejście do projektowania płyt ewaluacyjnych[^11]. Nowa koncepcja zakładała minimalizację kosztów poprzez ograniczenie liczby komponentów na płytach rozwojowych, co zwiększyło ich dostępność dla szerokiego grona użytkowników, dzięki redukcji bariery wejścia poprzez dedykowane IDE, wsparcie jedynie wybranych mikrokontrolerów, a także wysokiej jakości dokumentacji i materiałów dodatkowych. Efektem tego był rozwój aktywnej społeczności, której zaangażowanie w tworzenie nowych rozwiązań dodatkowo napędzało dalszy rozwój platformy.
 
 Standardowa konstrukcja tych płytek obejmowała jedynie niezbędne elementy, takie jak mikroprocesor z bootloaderem _(umożliwiający programowanie bez zewnętrznego programatora)_, stabilizator napięcia, rezonator kwarcowy oraz listwy kołkowe _(goldpiny)_ do podłączania układów peryferyjnych.
 
-Z czasem producenci modułów rozwojowych zaczęli dostosowywać wyprowadzenia płytek testowych w taki sposób, aby były kompatybilne z tym standardowym rozstawem złączy, co ułatwiło ich integrację i stało się powszechną praktyką dzięki zastosowaniu licencji **open-hardware** (CC BY-SA). Takie rozwiązanie zredukowało koszty, trafiając do jeszcze szerszego grona odbiorców. Śladem Arduino podążył Microchip, wprowadzając otwarty standard **microBUS**, który mimo bardziej dopracowanego projektu nie osiągnął tak dużej popularności.
+Z czasem producenci modułów rozwojowych zaczęli dostosowywać wyprowadzenia płytek testowych w taki sposób, aby były kompatybilne z tym standardowym rozstawem złączy, co ułatwiło ich integrację i stało się powszechną praktyką dzięki zastosowaniu licencji **open-hardware** (CC BY-SA)[^12]. Takie rozwiązanie zredukowało koszty, trafiając do jeszcze szerszego grona odbiorców. Śladem Arduino podążył Microchip, wprowadzając otwarty standard **microBUS**, który mimo bardziej dopracowanego projektu nie osiągnął tak dużej popularności.
 
 Od tego momentu większość modułów i płyt testowych zaczęła być udostępniana jako otwarte projekty. Choć oferowały jedynie podstawową funkcjonalność, towarzyszyła im pełna dokumentacja techniczna, co znacznie ułatwiało ich integrację w bardziej złożonych systemach. Dzięki temu inżynierowie systemów wbudowanych mogą dobrać odpowiednie moduły i rozpocząć prace deweloperskie jeszcze przed zaprojektowaniem płytki PCB. Dodatkowym ułatwieniem są udostępniane na licencji **open-source** biblioteki demonstracyjne, które przyspieszają proces wdrożenia.
 
-Obecnie najpopularniejszą platformą deweloperską jest **Nucleo** _(rys. 6b)_, co jest bezpośrednio powiązane z sukcesem mikrokontrolerów **STM32**. Istotną rolę odgrywa niska cena płytki, oscylująca w okolicach 45-85zł, która na dodatek zawiera programator/debugger **ST-Link**. Wśród innych popularnych platform znajdują się **FRDM** _(NXP)_ oraz **LaunchPad** od _(Texas Instruments)_. Jednak kluczowym elementem decydującym o popularności danego rozwiązania jest jego _"ekosystem"_. Oprócz wysokiej jakości dokumentacji, użytkownicy oczekują dostępności bibliotek, przykładów demonstracyjnych zarówno dla firmware, jak i software, oraz zapewnienia długoterminowego wsparcia. Rozwój tego ekosystemu nie musi zależeć wyłącznie od producentów mikrokontrolerów. Firmy produkujące moduły, takie jak Waveshare, Adafruit, oraz społeczności publikujące na forach czy **GitHub**, mogą aktywnie przyczyniać się do jego rozwoju. Z uwagi na zdywersyfikowaną naturę tego "ekosystemu", otwartość publikowanych produktów staje się kluczowym czynnikiem jego sukcesu. Płyty deweloperskie stanowią ważną część tego ekosystemu, a ich sukces jest ściśle skorelowany z jego kondycją na rynku.
+Obecnie najpopularniejszą platformą deweloperską jest **Nucleo** _(rys. 6b)_[^13], co jest bezpośrednio powiązane z sukcesem mikrokontrolerów **STM32**. Istotną rolę odgrywa niska cena płytki, oscylująca w okolicach 45-85zł, która na dodatek zawiera programator/debugger **ST-Link**. Wśród innych popularnych platform znajdują się **FRDM** _(NXP)_ oraz **LaunchPad** od _(Texas Instruments)_. Jednak kluczowym elementem decydującym o popularności danego rozwiązania jest jego _"ekosystem"_. Oprócz wysokiej jakości dokumentacji, użytkownicy oczekują dostępności bibliotek, przykładów demonstracyjnych zarówno dla firmware, jak i software, oraz zapewnienia długoterminowego wsparcia. Rozwój tego ekosystemu nie musi zależeć wyłącznie od producentów mikrokontrolerów. Firmy produkujące moduły, takie jak Waveshare, Adafruit, oraz społeczności publikujące na forach czy **GitHub**, mogą aktywnie przyczyniać się do jego rozwoju. Z uwagi na zdywersyfikowaną naturę tego "ekosystemu", otwartość publikowanych produktów staje się kluczowym czynnikiem jego sukcesu. Płyty deweloperskie stanowią ważną część tego ekosystemu, a ich sukces jest ściśle skorelowany z jego kondycją na rynku.
 
 ![rys.6](img/arduino-nucleo.png)
 > **Rysunek 6.** Płyty rozwojowe (a) Arduino Uno (b) Nucleo STM32G0RB
@@ -117,10 +121,17 @@ Na początku XXI wieku podejście do IDE zaczęło się zmieniać. Coraz więcej
 
 Co ciekawe, STMicroelectronics w tamtym czasie nie posiadało własnego IDE. Potrzeba była tak duża, że właśnie na bazie Eclipse oddolnie rozwinął się projekt **Atollic** TrueSTUDIO, który z czasem został wchłonięty i rozbudowany, tworząc oficjalne **STM32CubeIDE** _(rys. 7)_. To doskonały przykład siły społeczności internetowej. Z podobnego rozwiązania skorzystało również NXP, rozwijając MCUXpresso na bazie Eclipse.
 
-Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_, wyróżniający się szybkością działania, intuicyjnością i otwartą architekturą. Jego lekka struktura zużywa mniej zasobów niż tradycyjne IDE, a rozbudowany ekosystem rozszerzeń umożliwia łatwą integrację z narzędziami do programowania systemów wbudowanych. Obecnie Arduino zrezygnowało z dalszego rozwoju własnego IDE, adaptując VSCode do swoich potrzeb, a **PlatformIO** również rozwija się dynamicznie _(rys. 7)_.
+Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_ [^14], wyróżniający się szybkością działania, intuicyjnością i otwartą architekturą. Jego lekka struktura zużywa mniej zasobów niż tradycyjne IDE, a rozbudowany ekosystem rozszerzeń umożliwia łatwą integrację z narzędziami do programowania systemów wbudowanych. Obecnie Arduino zrezygnowało z dalszego rozwoju własnego IDE, adaptując VSCode do swoich potrzeb, a **PlatformIO** również rozwija się dynamicznie _(rys. 7)_.
 
 ![rys.7](img/ide.png)
 > **Rysunek 7.** Ewolucja IDE uwzględniając ich względną popularność
+
+A Systematic Literature Review Exploring the Barriers and Challenges to Open Innovation within the Financial Service Industry
+
+[^11]: T. Nguyen, S. Zoëga Andreasen, A. Wolff, D. Duong Bang, **Open-Source Mikrosterowniki w Urządzeniach Lab-on-a-Chip, Micromachines**, 2018, `ISSN: 2072-666X`
+[^12]: A. Kalache, H. Lunnikivi, D. Timo, **Open-Source RISC-V Microcontroller for Rust-Based Hard Real-Time Systems, Tampere University**, 2024, `ISBN 9783031661464`
+[^13]: J. McLurkin, J. Rykowski, M. John, Q. Kaseman, A. J. Lynch, **Using Multi-Robot Systems for Engineering Education: Teaching and Outreach With Large Numbers of an Advanced, Low-Cost Robot**, IEEE, 2013, DOI: `10.1109/TE.2012.2222646`
+[^14]: A. Eliasz, **Zephyr RTOS Embedded C Programming**, Apress, 2024, `DOI: 10.1007/979-8-8688-0107-5`, `ISBN: 9798868801075`
 
 ### Układy SoC
 
@@ -128,10 +139,13 @@ Gdy dana funkcjonalność zaczęła pojawiać się coraz częściej, zwłaszcza 
 
 W przypadku płytek deweloperskich z tego typu układami konieczne jest wyposażenie ich w odpowiednie komponenty umożliwiające pełne wykorzystanie dostępnych funkcji. Obejmuje to między innymi układy toru radiowego w systemach bezprzewodowych oraz transceivery dostosowujące poziomy sygnałów i sposób transmisji do wymagań przewodowych standardów komunikacyjnych.
 
-Najpopularniejszym SoC jest **ESP32** _(rys. 8a)_, które zdobyło uznanie dzięki niskiej cenie i łatwości implementacji. Zawiera zintegrowane moduły Wi-Fi i Bluetooth. W bardziej zaawansowanych zastosowaniach powszechnie stosowane są układy firmy Nordic Semiconductor _(**nRF52**)_ _(rys. 8b)_ oraz STMicroelectronics _(**STM32WB**, **STM32WL**)_. Rozwój tych technologii jest ściśle związany z Internetem Rzeczy _(**IoT**)_ oraz informatyzacją przemysłu _(Przemysł 4.0)_.
+Najpopularniejszym SoC jest **ESP32**[^15] _(rys. 8a)_, które zdobyło uznanie dzięki niskiej cenie i łatwości implementacji. Zawiera zintegrowane moduły Wi-Fi i Bluetooth. W bardziej zaawansowanych zastosowaniach powszechnie stosowane są układy firmy Nordic Semiconductor _(**nRF52**[^16])_ _(rys. 8b)_ oraz STMicroelectronics _(**STM32WB**, **STM32WL**)_. Rozwój tych technologii jest ściśle związany z Internetem Rzeczy _(**IoT**)_ oraz informatyzacją przemysłu _(Przemysł 4.0)_.
 
 ![rys.8](img/esp32-nrf52.png)
 > **Rysunek 8.** Płyty rozwojowe (a) ESP32 (b) Nucleo nRF52
+
+[^15]: J. Soto-Cruz, E. Ruiz-Ibarra, J. Vázquez-Castillo, **A Survey of Efficient Lightweight Cryptography for Power-Constrained Microcontrollers**, Technologies, 2024, `DOI: 10.3390/technologies13010003`
+[^16]: R. B. Salikhov; V. Kh. Abdrakhmanov; T. T. Yumalin, **Experience of Using Bluetooth Low Energy to Develop a Sensor Data Exchange System Based on the NRF52832 Microcontroller**, IEEE, 2021, `DOI: 10.1109/UralCon52005.2021.9559492`
 
 ### Podsumowanie
 
@@ -148,7 +162,7 @@ Nie można jednak całkowicie zaniedbać potrzeb rynku, o czym przypomina sukces
 
 Najważniejsze układy programowalne, wraz z powiązanymi płytkami ewaluacyjnymi oraz wyróżnieniem kolejnych zintegrowanych funkcji _(pogrubione)_ i innych kluczowych cech, zostały zestawione w **tabeli 1**. Rozwój systemów wbudowanych to rezultat działań wielu firm, które, choć często działają niezależnie, wpływają na siebie nawzajem, tworząc jeden dynamicznie ewoluujący ekosystem.
 
-> **Tabela 1.** Przełomowe mikroprocesory, w których nowa funkcjonalność stała się standardem, oraz te, które zyskały dużą popularność (wraz z płytą rozwojową)
+> **Tabela 1.** Przełomowe mikroprocesory, w których nowa funkcjonalność stała się standardem, oraz te, które zyskały dużą popularność _(wraz z płytą rozwojową)_
 
 | Rok  | MPU lub SoC                   | Peryferia i cechy szczególne                    | Devboard                       |
 | ---- | ----------------------------- | ----------------------------------------------- | ------------------------------ |
@@ -173,7 +187,6 @@ Najważniejsze układy programowalne, wraz z powiązanymi płytkami ewaluacyjnym
 | 2016 | ESP32 _(Espressif)_           | 2×Wi-Fi + Bluetooth                             | ESP32 DevKit V1 _(DOIT)_       |
 | 2019 | STM32H7                       | _Dostosowany pod **AI**_                        | STM32H7 Nucleo                 |
 | 2020 | STM32WLE5                     | **LoRa**                                        | STM32WLE5 Nucleo               |
-
 
 ### Sterowniki PLC
 
