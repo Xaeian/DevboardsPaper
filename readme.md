@@ -2,9 +2,9 @@
 
 #### Streszczenie
 
-Artykuł przedstawia ewolucję programowalnych płytek w kontekście zmian rynkowych, technologicznych oraz zmieniającego się podejścia do projektowania systemów wbudowanych. Omówiono historyczny rozwój płytek ewaluacyjnych, ich wpływ na inżynierię oraz przejście od zamkniętych do otwartych standardów. Szczególną uwagę poświęcono roli otwartego oprogramowania i modularnych architektur w kształtowaniu współczesnych rozwiązań. Na przykładzie projektu **OpenCPLC** pokazano, jak warstwowe podejście do projektowania może zwiększyć elastyczność i zastosowanie sterowników PLC zarówno w przemyśle, jak i edukacji.
+Artykuł analizuje ewolucję programowalnych płytek w kontekście dynamicznych zmian rynkowych, technologicznych i nowych podejść do projektowania systemów wbudowanych. Przedstawiono historię rozwoju płytek ewaluacyjnych oraz ich wpływ na inżynierię, podkreślając przejście od zamkniętych ekosystemów do otwartych standardów. Szczególną uwagę poświęcono roli otwartego oprogramowania oraz modularnych architektur w kształtowaniu nowoczesnych rozwiązań. Na przykładzie projektu **OpenCPLC** ukazano, jak warstwowe podejście do projektowania może zwiększyć elastyczność i zakres zastosowań sterowników PLC, zarówno w przemyśle, jak i edukacji. Ewolucja płytek deweloperskich wskazuje na wyraźny trend, gdzie otwartość i modułowość stają się kluczowymi czynnikami determinującymi przyszłość systemów wbudowanych.
 
-**Słowa kluczowe**: płyty programowalne, mikrokontrolery, sterowniki PLC, otwarte standardy, systemy wbudowane, OpenCPLC, warstwowa, modułowa architektura
+**Słowa kluczowe**:  programowalne płytki rozwojowe, mikrokontrolery, sterowniki PLC, otwarte standardy, systemy wbudowane, modularna architektura, OpenCPLC, integracja sprzętowa
 
 ### Wstęp
 
