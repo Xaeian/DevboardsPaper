@@ -126,8 +126,6 @@ Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_[^14], wy
 ![rys.7](img/ide.png)
 > **Rysunek 7.** Ewolucja IDE uwzględniając ich względną popularność
 
-A Systematic Literature Review Exploring the Barriers and Challenges to Open Innovation within the Financial Service Industry
-
 [^11]: T. Nguyen, S. Zoëga Andreasen, A. Wolff, D. Duong Bang; **Open-Source Mikrosterowniki w Urządzeniach Lab-on-a-Chip, Micromachines**. 2018, `ISSN: 2072-666X`
 [^12]: A. Kalache, H. Lunnikivi, D. Timo; **Open-Source RISC-V Microcontroller for Rust-Based Hard Real-Time Systems, Tampere University**. 2024, `ISBN 9783031661464`
 [^13]: J. McLurkin, J. Rykowski, M. John, Q. Kaseman, A. J. Lynch; **Using Multi-Robot Systems for Engineering Education: Teaching and Outreach With Large Numbers of an Advanced, Low-Cost Robot**. IEEE, 2013, DOI: `10.1109/TE.2012.2222646`
