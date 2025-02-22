@@ -80,7 +80,7 @@ Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój
 [^6]: M.A. Koslowski, G.B. Borba, **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**, Intertech Conference Proceedings, 2014, `DOI: 10.14684/intertech.13.2014.100-104` 
 [^7]: TW Schultz, T Schultz, **C and the 8051**, Springer, 2003, `ISBN: 9783540204091, 3540204091`
 
-### Dalszy rozwój mikroprocesorów
+### Dalszy rozwój mikrokontrolerów
 
 W połowie lat 80. wyraźnie ukształtował się podział między mikroprocesorami **CPU** a mikrokontrolerami **MPU**. Mikroprocesory rozwijano z myślą o komputerach osobistych i systemach operacyjnych, podczas gdy mikrokontrolery integrowały w jednym układzie scalonym coraz więcej peryferiów, takich jak przetworniki **ADC** i **DAC**, komparatory, interfejsy **SPI**, **UART** i **I²C**, a także zaawansowane układy taktowania z pętlą **PLL** (_tab. 1_). Obecnie wiele z tych funkcji stało się standardem i jest integrowanych w większości konstrukcji **MPU** ogólnego przeznaczenia, eliminując potrzebę stosowania wielu zewnętrznych komponentów, także na płytach demonstracyjnych.
 
