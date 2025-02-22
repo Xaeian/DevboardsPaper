@@ -8,28 +8,42 @@ Artykuł przedstawia ewolucję programowalnych płytek w kontekście zmian rynko
 
 ### Wstęp
 
-**Płyty programowalne**, znane także jako płytki deweloperskie czy ewaluacyjne, odgrywają istotną rolę w rozwoju systemów wbudowanych od początków mikroelektroniki. Są nieodzownym narzędziem w procesie projektowania, zwłaszcza na wczesnych etapach prac, a także pełnią funkcję edukacyjną i demonstracyjną. Ich rozwój nie przebiegał w izolacji, lecz był ściśle związany z ewolucją mikrokontrolerów i narzędzi programistycznych umożliwiających ich programowanie. Płyty te były raczej wynikiem postępu technologicznego mikrokontrolerów i dostępnych narzędzi niż samodzielnie rozwijającym się elementem. Całość wpisuje się w kontekst dynamicznie zmieniającej się technologii, rosnących potrzeb inżynierów i wymagań rynkowych. Przyjrzyjmy się, jak te narzędzia ewoluowały na przestrzeni lat. Od wczesnych lat 70. XX wieku aż po współczesność.
+**Płyty programowalne**, znane także jako płytki deweloperskie czy ewaluacyjne, odgrywają istotną rolę w rozwoju systemów wbudowanych od początków mikroelektroniki [^1]. Są nieodzownym narzędziem w procesie projektowania, zwłaszcza na wczesnych etapach prac, a także pełnią funkcję edukacyjną i demonstracyjną. Ich rozwój nie przebiegał w izolacji, lecz był ściśle związany z ewolucją mikrokontrolerów i narzędzi programistycznych umożliwiających ich programowanie. Płyty te były raczej wynikiem postępu technologicznego mikrokontrolerów i dostępnych narzędzi niż samodzielnie rozwijającym się elementem. Całość wpisuje się w kontekst dynamicznie zmieniającej się technologii, rosnących potrzeb inżynierów i wymagań rynkowych. Przyjrzyjmy się, jak te narzędzia ewoluowały na przestrzeni lat. Od wczesnych lat 70. XX wieku aż po współczesność [^2].
 
 Wczesne komputery _(np. **IBM**)_ oraz późniejsze mikrokomputery _(np. **Raspberry Pi**)_, przeznaczone do pracy z systemami operacyjnymi, oraz ukłafy **FPGA**, także mogą być uznawane za płyty ewaluacyjne i niewątpliwie stanowią część systemów wbudowanych. W niniejszym artykule pominięto jednak ten temat, aby skupić się wyłącznie na mikrokontrolerach.
+
+[^1]: L. Gomes, **Programmable logic devices supporting embedded system design curriculum**, IEEE Micro, 2006, DOI: 10.1109/IECON.2005.1569241
+[^2]: K. Raghu Raghunathan, **History of Microcontrollers: First 50 Years**, IEEE Micro, 2021, `10.1109/MM.2021.3114754`
 
 ### Narodziny Mikroprocesorów
 
 Początek lat 70. to okres, w którym zaczęto rozwijać mikroprocesory. Jako pierwszy pojawił się 4-bitowy **Intel 4004** (rys. 1a, rys. 2a), który był jednostką arytmetyczno-logiczną _(ALU)_, wymagającym podłączenia dodatkowych układów zewnętrznych, takich jak kontrolery I/O, pamięci RAM i ROM. Programowanie odbywało się przez zapisywanie programu w pamięci ROM, która była trwale programowana w procesie produkcyjnym, a schematy logiki często były projektowane przy użyciu kart perforowanych.
 
-W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane układy, które można już było określić mianem mikrokontrolerów, gdyż zawierały zarówno pamięć **RAM**, jak i **ROM**, eliminując konieczność stosowania zewnętrznych modułów. Przykładami takich układów są **TMS 1000** od Texas Instruments oraz 8-bitowy **Intel 8048** _(rys. 1b, rys. 2b)_, wyposażony dodatkowo w **timer** sprzętowy. Układy programowane były w **asemblerze**, z wykorzystaniem prostych terminali. Zastosowanie pamięci **EEPROM** pozwoliło na wielokrotne programowanie bez wymiany układu, ułatwiając szybkie modyfikacje kodu.
+W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane układy, które można już było określić mianem mikrokontrolerów, gdyż zawierały pamięći **RAM** i **ROM**, eliminując konieczność stosowania zewnętrznych modułów. Przykładami takich układów są **TMS 1000** od Texas Instruments oraz 8-bitowy **Intel 8048** _(rys. 1b, rys. 2b)_, wyposażony dodatkowo w **timer** sprzętowy. Układy programowane były w **asemblerze**, z wykorzystaniem prostych terminali. Zastosowanie pamięci **EEPROM** pozwoliło na wielokrotne programowanie bez wymiany układu, ułatwiając szybkie modyfikacje kodu.
 
 ![rys.1](img/70-chip.png)
-Rysunek 1. (a) Mikroprocesor Intel 4004; (b) Mikrokontroler 8048
+> **Rysunek 1.** (a) Mikroprocesor Intel 4004; (b) Mikrokontroler 8048
+
 ![rys.2](img/70-devboards.png)
-Rysunek 2. Płyty rozwojowe: (a) Rodzina MCS-4, w tym Intel 4004; (b) iSBC-80/10 z mikrokontrolerem 8048
+> **Rysunek 2.** Płyty rozwojowe: (a) Rodzina MCS-4, w tym Intel 4004; (b) iSBC-80/10 z mikrokontrolerem 8048  
 
 W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako narzędzia do nauki czy eksperymentowania, ale jako kluczowe narzędzia mające na celu usprawnienie realizacji konkretnych projektów inżynieryjnych, a ich funkcjonalność była zbliżona do samego mikrokontrolera.
+
+### Narodziny Mikroprocesorów
+
+Początek lat 70. to okres, w którym zaczęto rozwijać mikroprocesory. Jako pierwszy pojawił się 4-bitowy **Intel 4004** (rys. 1a, rys. 2a) [^3], który był jednostką arytmetyczno-logiczną _(ALU)_, wymagającym podłączenia dodatkowych układów zewnętrznych, takich jak kontrolery I/O, pamięci RAM i ROM. Programowanie odbywało się przez zapisywanie programu w pamięci ROM, która była trwale programowana w procesie produkcyjnym, a schematy logiki często były projektowane przy użyciu kart perforowanych.
+
+W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane układy, które można już było określić mianem mikrokontrolerów, gdyż zawierały zarówno pamięć **RAM**, jak i **ROM**, eliminując konieczność stosowania zewnętrznych modułów. Przykładami takich układów są **TMS 1000** od Texas Instruments oraz 8-bitowy **Intel 8048** _(rys. 1b, rys. 2b)_, wyposażony dodatkowo w **timer** sprzętowy. Układy programowane były w **asemblerze**, z wykorzystaniem prostych terminali. Zastosowanie pamięci **EEPROM** pozwoliło na wielokrotne programowanie bez wymiany układu, ułatwiając szybkie modyfikacje kodu.
+
+W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako narzędzia do nauki czy eksperymentowania, ale jako kluczowe narzędzia mające na celu usprawnienie realizacji konkretnych projektów inżynieryjnych, a ich funkcjonalność była zbliżona do samego mikrokontrolera.
+
+[^3]: F. Faggin, M. Hoff, S. Mazor, M. Shima, **The history of the 4004**, IEEE Micro, 1996, `DOI: 10.1109/40.546561`
 
 ### Wczesny rozwój techniki mikroprocesorowej
 
 Szybko dostrzeżono, że nadchodzi technologiczna rewolucja, a technologie oparte na mikrokontrolerach, rozwijane od lat 70., mają znaczący potencjał rozwoju i ulepszeń. Pojawiła się zatem potrzeba zaprezentowania ich funkcjonalności szerszemu gronu odbiorców. W odpowiedzi na to płyty deweloperskie zaczęły być projektowane jako bardziej przemyślane i kompleksowe produkty, przeznaczone dla inżynierów elektroniki z różnych sektorów.
 
-Przełomowa konstrukcja prototypowa, **SDK-85** z mikroprocesorem **Intel 8085** _(rys. 3)_, zapewniała kompleksowe środowisko testowe. Umożliwiała programowanie w asemblerze zarówno przez zewnętrzny terminal podłączany przez interfejs pętli prądowej **20mA**, jak i za pomocą wbudowanej **klawiatury** oraz **wyświetlacza**. Było to szczególnie istotne w czasach, kiedy poziom komputeryzacji był jeszcze niski, a taka opcja okazywała się bardziej ergonomiczna dla większości inżynierów. Ponadto, klawiaturę i wyświetlacz można było wykorzystać bezpośrednio z poziomu aplikacji. Płyta rozwojowa SDK-85 jest wyposażona również w:
+Przełomowa konstrukcja prototypowa, **SDK-85** [^4] z mikroprocesorem **Intel 8085** _(rys. 3)_, zapewniała kompleksowe środowisko testowe. Umożliwiała programowanie w asemblerze zarówno przez zewnętrzny terminal podłączany przez interfejs pętli prądowej **20mA**, jak i za pomocą wbudowanej **klawiatury** oraz **wyświetlacza**. Było to szczególnie istotne w czasach, kiedy poziom komputeryzacji był jeszcze niski, a taka opcja okazywała się bardziej ergonomiczna dla większości inżynierów. Ponadto, klawiaturę i wyświetlacz można było wykorzystać bezpośrednio z poziomu aplikacji. Płyta rozwojowa SDK-85 jest wyposażona również w:
 
 - Zegar systemowy **3MHz**
 - Pamięć RAM **256B**/512B
@@ -38,7 +52,7 @@ Przełomowa konstrukcja prototypowa, **SDK-85** z mikroprocesorem **Intel 8085**
 - **22** linie **I/O** (+16 I/O z rozszrzeniem)
 
 ![rys.3](img/SDK-85.png)
-Rysunek 3. Płyta rozwojowa SDK-85 z mikroprocesorem 8085
+> **Rysunek 3.** Płyta rozwojowa SDK-85 z mikroprocesorem 8085
 
 W ślad za Intelem inni producenci również wprowadzili własne płyty deweloperskie, m.in.:
 
@@ -50,15 +64,21 @@ W ślad za Intelem inni producenci również wprowadzili własne płyty dewelope
 
 Jednak żadna z nich nie osiągnęła tak dużego sukcesu jak SDK-85, głównie z powodu późniejszego wejścia na rynek. Intel zaprezentował SDK-85 już w 1976 roku, a w 1980 roku udoskonaloną wersję **SDK-86**, wspierającą systemy operacyjne. Konkurencyjne rozwiązania pojawiły się później, co znacząco ograniczyło ich rynkową przewagę.
 
+[^4]: J. C. Rieth, **A Microprocessor Managed Shipboard Tank Level Indicator System**, Naval Postgraduate School, 1980, `DOI: 10.1109/40.546561`
+
 ### Początki język C oraz IDE
 
-W latach 80. pojawiły się pierwsze mikrokontrolery obsługujące język C, co znacząco ułatwiło rozwój oprogramowania w systemach wbudowanych. Jednym z pionierów był **Intel 8051**, który w połączeniu z płytą rozwojową **EVK-51** zyskał popularność dzięki ekosystemowi **Keil**. Pakiet ten integrował kluczowe narzędzia, w tym kompilator **Keil C51**, debuger oraz programatory, takie jak Willem EPROM Programmer, umożliwiające zapis wsadu do pamięci mikrokontrolera metodą **ISP** _(In-System Programming)_, a w późniejszych wersjach także przez **UART _(RS-232)_**.
+W latach 80. pojawiły się pierwsze mikrokontrolery obsługujące język C, co znacząco ułatwiło rozwój oprogramowania w systemach wbudowanych. Jednym z pionierów był **Intel 8051**, który w połączeniu z płytą rozwojową **EVK-51** zyskał popularność dzięki ekosystemowi **Keil C51**[^5]. Pakiet ten integrował kluczowe narzędzia, w tym kompilator, debuger oraz programatory, takie jak Willem EPROM Programmer, umożliwiające zapis wsadu do pamięci mikrokontrolera metodą **ISP** _(In-System Programming)_, a w późniejszych wersjach także przez **UART _(RS-232)_**.
 
-Jednak pod koniec lat 90., dzięki szerszemu wsparciu dla różnych architektur, coraz większą popularność zdobywał **IAR Embedded Workbench** (rys. 7). Narzędzie to, choć bazowało na podobnych założeniach, spełniało więcej norm, co sprawiło, że stało się preferowanym wyborem w aplikacjach przemysłowych, medycznych i motoryzacyjnych Później **Keil** odświeżył i rozbudował swoje **IDE** _(integrated development environment)_, które w kolejnych latach przyjęło nazwę **µVision** _(rys. 7)_, umacniając swoją pozycję, szczególnie w systemach opartych na mikrokontrolerach **ARM**.
+Jednak pod koniec lat 90., dzięki szerszemu wsparciu dla różnych architektur, coraz większą popularność zdobywał **IAR Embedded Workbench**[^6] (rys. 7). Narzędzie to, choć bazowało na podobnych założeniach, spełniało więcej norm, co sprawiło, że stało się preferowanym wyborem w aplikacjach przemysłowych, medycznych i motoryzacyjnych Później **Keil** odświeżył i rozbudował swoje **IDE** _(integrated development environment)_, które w kolejnych latach przyjęło nazwę **µVision** _(rys. 7)_, umacniając swoją pozycję, szczególnie w systemach opartych na mikrokontrolerach **ARM**.
 
 Pierwsi inżynierowie systemów wbudowanych oczekiwali narzędzi umożliwiających szybkie i wygodne tworzenie oprogramowania bez konieczności ręcznej konfiguracji licznych, odrębnych komponentów. Pierwsze IDE wyróżniały się pełną integracją, wysoką stabilnością oraz wsparciem technicznym, co przyczyniło się do ich dominacji na rynku.
 
-Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój oprogramowania, zapewniając zarówno niskopoziomową kontrolę nad sprzętem, jak i przenośność kodu między różnymi architekturami. Dzięki swojej efektywności, elastyczności oraz ugruntowanej pozycji jako pierwszego szeroko stosowanego języka w tej dziedzinie, C pozostaje dominującym standardem w programowaniu mikrokontrolerów.
+Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój oprogramowania, zapewniając zarówno niskopoziomową kontrolę nad sprzętem, jak i przenośność kodu między różnymi architekturami [^7]. Dzięki swojej efektywności, elastyczności oraz ugruntowanej pozycji jako pierwszego szeroko stosowanego języka w tej dziedzinie, C pozostaje dominującym standardem w programowaniu mikrokontrolerów.
+
+[^5]: M. Beach, C. Hills, **C51 Primer**, Springer, 1996, `ISBN:9783642047985, 364204798X`
+[^6]: M.A. Koslowski, G.B. Borba, **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**, Intertech Conference Proceedings, 2014, `DOI:10.14684/intertech.13.2014.100-104` 
+[^7]: TW Schultz, T Schultz, **C and the 8051**, Springer, 2003, `ISBN:9783540204091, 3540204091`
 
 ### Dalszy rozwój mikroprocesorów
 
@@ -67,7 +87,7 @@ W połowie lat 80. wyraźnie ukształtował się podział między mikroprocesora
 Do pracy z "pełnoprawnymi" mikrokontrolerami przeznaczone były m.in. płyty z serii **PICDEM** _(rys. 4a)_ od Microchip oraz **STK500** _(rys. 4b)_ dla układów **AVR** firmy Atmel . Skierowane głównie do profesjonalistów oraz studentów uczelni technicznych zajmujących się systemami wbudowanymi, oferowały szeroki zestaw interfejsów, złącz oraz elementów testowych, takich jak diody LED, przyciski, potencjometry, buzzery, wyświetlacze oraz obszar do prototypowania, co umożliwiało szybkie wdrażanie i testowanie nowych rozwiązań. Dzięki zastosowaniu podstawek pozwalały na pracę z różnymi modelami mikrokontrolerów, zapewniając elastyczność w doborze układów. Płyty te stanowiły reprezentatywny przykład rozwiązań swojej epoki, odgrywając istotną rolę w edukacji oraz profesjonalnym rozwoju systemów wbudowanych.
 
 ![rys.4](img/90-devboards.png)
-Rysunek 4. Płyty rozwojowe (a) Microchip PICDEM 2 (b) Atmel STK500
+> **Rysunek 4.** Płyty rozwojowe (a) Microchip PICDEM 2 (b) Atmel STK500
 
 Wykorzystywały dedykowane interfejsy programowania **ICSP** _(Microchip)_, **ISP** _(Atmel)_ oraz **JTAG**, który jako pierwszy stał się otwartym standardem do programowania i debugowania. Szybko zyskał popularność, a większość współczesnych procesorów i mikrokontrolerów jest w niego wyposażona.
 
@@ -76,7 +96,7 @@ Wraz z pojawieniem się pierwszych zaawansowanych edytorów o modułowej archite
 Choć mikrokontrolery **AVR** oraz **PIC** idealnie odpowiadały na potrzeby rynku, szybko dostrzeżono, że bardziej efektywnym podejściem jest rozdzielenie rozwoju rdzenia, licencjonowanego przez **ARM**, od projektowania układów peryferyjnych przez producentów mikrokontrolerów. Model ten przyczynił się do rosnącej dominacji procesorów **ARM** pod koniec XX wieku, gdy mikrokontrolery zyskiwały coraz większe znaczenie w przemyśle. Pierwsze układy oparte na architekturze **ARM7** łączyły wysoką wydajność z energooszczędnością. Wśród pionierów znalazły się **LPC2000** od Philipsa _(obecnie NXP)_ z płytą **LPC-P2148** _(rys. 5)_ od Olimex oraz seria **STR7** od STMicroelectronics, które zapoczątkowały erę **32-bit**owych mikrokontrolerów.
 
 ![rys.5](img/LPC-P2148.png)
-Rysunek 5. Płyta rozwojowa LPC-P2148 z mikroprocesorem LPC2000
+> **Rysunek 5.** Płyta rozwojowa LPC-P2148 z mikroprocesorem LPC2000
 
 ### Minimalizm i otwarte standardy
 
@@ -100,7 +120,7 @@ Co ciekawe, STMicroelectronics w tamtym czasie nie posiadało własnego IDE. Pot
 Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_, wyróżniający się szybkością działania, intuicyjnością i otwartą architekturą. Jego lekka struktura zużywa mniej zasobów niż tradycyjne IDE, a rozbudowany ekosystem rozszerzeń umożliwia łatwą integrację z narzędziami do programowania systemów wbudowanych. Obecnie Arduino zrezygnowało z dalszego rozwoju własnego IDE, adaptując VSCode do swoich potrzeb, a **PlatformIO** również rozwija się dynamicznie _(rys. 7)_.
 
 ![rys.7](img/ide.png)
-Rysunek 7. Ewolucja IDE uwzględniając ich względną popularność
+> **Rysunek 7.** Ewolucja IDE uwzględniając ich względną popularność
 
 ### Układy SoC
 
@@ -111,7 +131,7 @@ W przypadku płytek deweloperskich z tego typu układami konieczne jest wyposaż
 Najpopularniejszym SoC jest **ESP32** _(rys. 8a)_, które zdobyło uznanie dzięki niskiej cenie i łatwości implementacji. Zawiera zintegrowane moduły Wi-Fi i Bluetooth. W bardziej zaawansowanych zastosowaniach powszechnie stosowane są układy firmy Nordic Semiconductor _(**nRF52**)_ _(rys. 8b)_ oraz STMicroelectronics _(**STM32WB**, **STM32WL**)_. Rozwój tych technologii jest ściśle związany z Internetem Rzeczy _(**IoT**)_ oraz informatyzacją przemysłu _(Przemysł 4.0)_.
 
 ![rys.8](img/esp32-nrf52.png)
-Rysunek 8. Płyty rozwojowe (a) ESP32 (b) Nucleo nRF52
+> **Rysunek 8.** Płyty rozwojowe (a) ESP32 (b) Nucleo nRF52
 
 ### Podsumowanie
 
@@ -124,11 +144,11 @@ Projektując nowe rozwiązania, warto opierać się na otwartych standardach ora
 Nie można jednak całkowicie zaniedbać potrzeb rynku, o czym przypomina sukces SoC, gdzie silna integracja kontrastuje z podejściem modułowym _(warstwowym)_. Integracja ta przyczynia się do miniaturyzacji i obniżenia kosztu końcowego produktu, dlatego będzie postępować, podobnie jak miało to miejsce od początków mikroprocesorów _(rys. 9)_.
 
 ![rys.9](img/chapters.png)
-Rysunek 9. Chronologiczny układ rozdziałów w pracy
+> **Rysunek 9.** Chronologiczny układ rozdziałów w pracy
 
 Najważniejsze układy programowalne, wraz z powiązanymi płytkami ewaluacyjnymi oraz wyróżnieniem kolejnych zintegrowanych funkcji _(pogrubione)_ i innych kluczowych cech, zostały zestawione w **tabeli 1**. Rozwój systemów wbudowanych to rezultat działań wielu firm, które, choć często działają niezależnie, wpływają na siebie nawzajem, tworząc jeden dynamicznie ewoluujący ekosystem.
 
-Tabela 1. Przełomowe mikroprocesory, w których nowa funkcjonalność stała się standardem, oraz te, które zyskały dużą popularność (wraz z płytą rozwojową)
+> **Tabela 1.** Przełomowe mikroprocesory, w których nowa funkcjonalność stała się standardem, oraz te, które zyskały dużą popularność (wraz z płytą rozwojową)
 
 | Rok  | MPU lub SoC                   | Peryferia i cechy szczególne                    | Devboard                       |
 | ---- | ----------------------------- | ----------------------------------------------- | ------------------------------ |
@@ -172,7 +192,7 @@ Lukę na rynku może wypełnić projekt **OpenCPLC** _(https://github.com/OpenCP
 Konstrukcja OpenCPLC Uno _(rys. 10)_ to pełnoprawny, niskobudżetowy sterownik PLC oparty na mikrokontrolerze STM32. Obsługuje napięcia 12V, 24V oraz 230VAC na wejściach cyfrowych **DI**, co pozwala na zastosowanie w maszynach przemysłowych, automatyce i systemach domowych. Jest wyposażony w przekaźniki **RO**, tranzystory **TO**, triaki oraz **RS485**, wspierając protokoły **Modbus RTU** i **BACnet**. Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się również jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach.
 
 ![rys.10](img/opencplc-uno.png)
-Rysunek 10. Sterownik OpenCPLC Uno
+> **Rysunek 10.** Sterownik OpenCPLC Uno
 
 ### Wnioski końcowe
 
