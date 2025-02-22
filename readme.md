@@ -8,12 +8,12 @@ Artykuł analizuje ewolucję programowalnych płytek w kontekście dynamicznych 
 
 ### Wstęp
 
-**Płyty programowalne**, znane także jako płytki deweloperskie czy ewaluacyjne, odgrywają istotną rolę w rozwoju systemów wbudowanych od początków mikroelektroniki [^1]. Są nieodzownym narzędziem w procesie projektowania, zwłaszcza na wczesnych etapach prac, a także pełnią funkcję edukacyjną i demonstracyjną. Ich rozwój nie przebiegał w izolacji, lecz był ściśle związany z ewolucją mikrokontrolerów i narzędzi programistycznych umożliwiających ich programowanie. Płyty te były raczej wynikiem postępu technologicznego mikrokontrolerów i dostępnych narzędzi niż samodzielnie rozwijającym się elementem. Całość wpisuje się w kontekst dynamicznie zmieniającej się technologii, rosnących potrzeb inżynierów i wymagań rynkowych. Przyjrzyjmy się, jak te narzędzia ewoluowały na przestrzeni lat. Od wczesnych lat 70. XX wieku aż po współczesność [^2].
+**Płyty programowalne**, znane także jako płytki deweloperskie czy ewaluacyjne, odgrywają istotną rolę w rozwoju systemów wbudowanych od początków mikroelektroniki[^1]. Są nieodzownym narzędziem w procesie projektowania, zwłaszcza na wczesnych etapach prac, a także pełnią funkcję edukacyjną i demonstracyjną. Ich rozwój nie przebiegał w izolacji, lecz był ściśle związany z ewolucją mikrokontrolerów i narzędzi programistycznych umożliwiających ich programowanie. Płyty te były raczej wynikiem postępu technologicznego mikrokontrolerów i dostępnych narzędzi niż samodzielnie rozwijającym się elementem. Całość wpisuje się w kontekst dynamicznie zmieniającej się technologii, rosnących potrzeb inżynierów i wymagań rynkowych. Przyjrzyjmy się, jak te narzędzia ewoluowały na przestrzeni lat. Od wczesnych lat 70. XX wieku aż po współczesność[^2].
 
 Wczesne komputery _(np. **IBM**)_ oraz późniejsze mikrokomputery _(np. **Raspberry Pi**)_, przeznaczone do pracy z systemami operacyjnymi, oraz ukłafy **FPGA**, także mogą być uznawane za płyty ewaluacyjne i niewątpliwie stanowią część systemów wbudowanych. W niniejszym artykule pominięto jednak ten temat, aby skupić się wyłącznie na mikrokontrolerach.
 
-[^1]: L. Gomes, **Programmable logic devices supporting embedded system design curriculum**, IEEE Micro, 2006, DOI:  10.1109/IECON.2005.1569241
-[^2]: K. Raghu Raghunathan, **History of Microcontrollers: First 50 Years**, IEEE Micro, 2021, `10.1109/MM.2021.3114754`
+[^1]: L. Gomes; **Programmable logic devices supporting embedded system design curriculum**. IEEE, 2006, `DOI: 10.1109/IECON.2005.1569241`
+[^2]: K. Raghu Raghunathan; **History of Microcontrollers: First 50 Years**. IEEE, 2021, `DOI: 10.1109/MM.2021.3114754`
 
 ### Narodziny Mikroprocesorów
 
@@ -31,19 +31,19 @@ W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako 
 
 ### Narodziny Mikroprocesorów
 
-Początek lat 70. to okres, w którym zaczęto rozwijać mikroprocesory. Jako pierwszy pojawił się 4-bitowy **Intel 4004** (rys. 1a, rys. 2a) [^3], który był jednostką arytmetyczno-logiczną _(ALU)_, wymagającym podłączenia dodatkowych układów zewnętrznych, takich jak kontrolery I/O, pamięci RAM i ROM. Programowanie odbywało się przez zapisywanie programu w pamięci ROM, która była trwale programowana w procesie produkcyjnym, a schematy logiki często były projektowane przy użyciu kart perforowanych.
+Początek lat 70. to okres, w którym zaczęto rozwijać mikroprocesory. Jako pierwszy pojawił się 4-bitowy **Intel 4004** (rys. 1a, rys. 2a)[^3], który był jednostką arytmetyczno-logiczną _(ALU)_, wymagającym podłączenia dodatkowych układów zewnętrznych, takich jak kontrolery I/O, pamięci RAM i ROM. Programowanie odbywało się przez zapisywanie programu w pamięci ROM, która była trwale programowana w procesie produkcyjnym, a schematy logiki często były projektowane przy użyciu kart perforowanych.
 
 W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane układy, które można już było określić mianem mikrokontrolerów, gdyż zawierały zarówno pamięć **RAM**, jak i **ROM**, eliminując konieczność stosowania zewnętrznych modułów. Przykładami takich układów są **TMS 1000** od Texas Instruments oraz 8-bitowy **Intel 8048** _(rys. 1b, rys. 2b)_, wyposażony dodatkowo w **timer** sprzętowy. Układy programowane były w **asemblerze**, z wykorzystaniem prostych terminali. Zastosowanie pamięci **EEPROM** pozwoliło na wielokrotne programowanie bez wymiany układu, ułatwiając szybkie modyfikacje kodu.
 
 W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako narzędzia do nauki czy eksperymentowania, ale jako kluczowe narzędzia mające na celu usprawnienie realizacji konkretnych projektów inżynieryjnych, a ich funkcjonalność była zbliżona do samego mikrokontrolera.
 
-[^3]: F. Faggin, M. Hoff, S. Mazor, M. Shima, **The history of the 4004**, IEEE Micro, 1996, `DOI:  10.1109/40.546561`
+[^3]: F. Faggin, M. Hoff, S. Mazor, M. Shima; **The history of the 4004**. IEEE, 1996, `DOI:  10.1109/40.546561`
 
 ### Wczesny rozwój techniki mikroprocesorowej
 
 Szybko dostrzeżono, że nadchodzi technologiczna rewolucja, a technologie oparte na mikrokontrolerach, rozwijane od lat 70., mają znaczący potencjał rozwoju i ulepszeń. Pojawiła się zatem potrzeba zaprezentowania ich funkcjonalności szerszemu gronu odbiorców. W odpowiedzi na to płyty deweloperskie zaczęły być projektowane jako bardziej przemyślane i kompleksowe produkty, przeznaczone dla inżynierów elektroniki z różnych sektorów.
 
-Przełomowa konstrukcja prototypowa, **SDK-85** [^4] z mikroprocesorem **Intel 8085** _(rys. 3)_, zapewniała kompleksowe środowisko testowe. Umożliwiała programowanie w asemblerze zarówno przez zewnętrzny terminal podłączany przez interfejs pętli prądowej **20mA**, jak i za pomocą wbudowanej **klawiatury** oraz **wyświetlacza**. Było to szczególnie istotne w czasach, kiedy poziom komputeryzacji był jeszcze niski, a taka opcja okazywała się bardziej ergonomiczna dla większości inżynierów. Ponadto, klawiaturę i wyświetlacz można było wykorzystać bezpośrednio z poziomu aplikacji. Płyta rozwojowa SDK-85 jest wyposażona również w:
+Przełomowa konstrukcja prototypowa, **SDK-85**[^4] z mikroprocesorem **Intel 8085** _(rys. 3)_, zapewniała kompleksowe środowisko testowe. Umożliwiała programowanie w asemblerze zarówno przez zewnętrzny terminal podłączany przez interfejs pętli prądowej **20mA**, jak i za pomocą wbudowanej **klawiatury** oraz **wyświetlacza**. Było to szczególnie istotne w czasach, kiedy poziom komputeryzacji był jeszcze niski, a taka opcja okazywała się bardziej ergonomiczna dla większości inżynierów. Ponadto, klawiaturę i wyświetlacz można było wykorzystać bezpośrednio z poziomu aplikacji. Płyta rozwojowa SDK-85 jest wyposażona również w:
 
 - Zegar systemowy **3MHz**
 - Pamięć RAM **256B**/512B
@@ -51,7 +51,7 @@ Przełomowa konstrukcja prototypowa, **SDK-85** [^4] z mikroprocesorem **Intel 8
 - Timer **14-bit**owy programowalny
 - **22** linie **I/O** (+16 I/O z rozszrzeniem)
 
-![rys.3](img/SDK-85.png)
+![rys.3](img/raw/SDK-85.png)
 > **Rysunek 3.** Płyta rozwojowa SDK-85 z mikroprocesorem 8085
 
 W ślad za Intelem inni producenci również wprowadzili własne płyty deweloperskie, m.in.:
@@ -64,7 +64,7 @@ W ślad za Intelem inni producenci również wprowadzili własne płyty dewelope
 
 Jednak żadna z nich nie osiągnęła tak dużego sukcesu jak SDK-85, głównie z powodu późniejszego wejścia na rynek. Intel zaprezentował SDK-85 już w 1976 roku, a w 1980 roku udoskonaloną wersję **SDK-86**, wspierającą systemy operacyjne. Konkurencyjne rozwiązania pojawiły się później, co znacząco ograniczyło ich rynkową przewagę.
 
-[^4]: J. C. Rieth, **A Microprocessor Managed Shipboard Tank Level Indicator System**, Naval Postgraduate School, 1980, `DOI:  10.1109/40.546561`
+[^4]: J. C. Rieth; **A Microprocessor Managed Shipboard Tank Level Indicator System**. Naval Postgraduate School, 1980, `DOI:  10.1109/40.546561`
 
 ### Początki język C oraz IDE
 
@@ -74,11 +74,11 @@ Jednak pod koniec lat 90., dzięki szerszemu wsparciu dla różnych architektur,
 
 Pierwsi inżynierowie systemów wbudowanych oczekiwali narzędzi umożliwiających szybkie i wygodne tworzenie oprogramowania bez konieczności ręcznej konfiguracji licznych, odrębnych komponentów. Pierwsze IDE wyróżniały się pełną integracją, wysoką stabilnością oraz wsparciem technicznym, co przyczyniło się do ich dominacji na rynku.
 
-Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój oprogramowania, zapewniając zarówno niskopoziomową kontrolę nad sprzętem, jak i przenośność kodu między różnymi architekturami [^7]. Dzięki swojej efektywności, elastyczności oraz ugruntowanej pozycji jako pierwszego szeroko stosowanego języka w tej dziedzinie, C pozostaje dominującym standardem w programowaniu mikrokontrolerów.
+Wprowadzenie **języka C** do systemów wbudowanych znacząco ułatwiło rozwój oprogramowania, zapewniając zarówno niskopoziomową kontrolę nad sprzętem, jak i przenośność kodu między różnymi architekturami[^7]. Dzięki swojej efektywności, elastyczności oraz ugruntowanej pozycji jako pierwszego szeroko stosowanego języka w tej dziedzinie, C pozostaje dominującym standardem w programowaniu mikrokontrolerów.
 
-[^5]: M. Beach, C. Hills, **C51 Primer**, Springer, 1996, `ISBN: 9783642047985, 364204798X`
-[^6]: M.A. Koslowski, G.B. Borba, **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**, Intertech Conference Proceedings, 2014, `DOI: 10.14684/intertech.13.2014.100-104` 
-[^7]: TW Schultz, T Schultz, **C and the 8051**, Springer, 2003, `ISBN: 9783540204091, 3540204091`
+[^5]: M. Beach, C. Hills; **C51 Primer**. Springer, 1996, `ISBN: 9783642047985, 364204798X`
+[^6]: M.A. Koslowski, G.B. Borba; **An Easy-to-Use Development Kit for a Microcontroller Course Based on the 8051**. Intertech Conference Proceedings, 2014, `DOI: 10.14684/intertech.13.2014.100-104` 
+[^7]: TW Schultz, T Schultz; **C and the 8051**. Springer, 2003, `ISBN: 9783540204091, 3540204091`
 
 ### Dalszy rozwój mikrokontrolerów
 
@@ -95,12 +95,12 @@ Wraz z pojawieniem się pierwszych zaawansowanych edytorów o modułowej archite
 
 Choć mikrokontrolery **AVR** oraz **PIC** idealnie odpowiadały na potrzeby rynku, szybko dostrzeżono, że bardziej efektywnym podejściem jest rozdzielenie rozwoju rdzenia, licencjonowanego przez **ARM**, od projektowania układów peryferyjnych przez producentów mikrokontrolerów. Model ten przyczynił się do rosnącej dominacji procesorów **ARM** pod koniec XX wieku, gdy mikrokontrolery zyskiwały coraz większe znaczenie w przemyśle. Pierwsze układy oparte na architekturze **ARM7** łączyły wysoką wydajność z energooszczędnością. Wśród pionierów znalazły się **LPC2000** od Philipsa _(obecnie NXP)_ z płytą **LPC-P2148**[^10] _(rys. 5)_ od Olimex oraz seria **STR7** od STMicroelectronics, które zapoczątkowały erę **32-bit**owych mikrokontrolerów.
 
-![rys.5](img/LPC-P2148.png)
+![rys.5](img/raw/LPC-P2148.png)
 > **Rysunek 5.** Płyta rozwojowa LPC-P2148 z mikroprocesorem LPC2000
 
-[^8]: M. P. Bates, **Programming 8-bit PIC Microcontrollers in C: with Interactive Hardware Simulation**, Newnes, 2008, `ISBN: 9780080560144, 0080560148`
-[^9]: D.P. Upadyshev; O.P. Razumeiko, **Disk for studying microcontrollers**, IEEE Micro, `DOI: 10.1109/SPCMTT.2008.4897492`
-[^10]: A. Kommu, R. Rao, **Designing a learning platform for the implementation of serial standards using ARM microcontroller LPC2148**, IEEE Micro, 2014, `DOI: 10.1109/ICRAIE.2014.6909185`
+[^8]: M. P. Bates; **Programming 8-bit PIC Microcontrollers in C: with Interactive Hardware Simulation**. Newnes, 2008, `ISBN: 9780080560144, 0080560148`
+[^9]: D.P. Upadyshev; O.P. Razumeiko; **Disk for studying microcontrollers**. IEEE, `DOI: 10.1109/SPCMTT.2008.4897492`
+[^10]: A. Kommu, R. Rao; **Designing a learning platform for the implementation of serial standards using ARM microcontroller LPC2148**. IEEE, 2014, `DOI: 10.1109/ICRAIE.2014.6909185`
 
 ### Minimalizm i otwarte standardy
 
@@ -121,17 +121,17 @@ Na początku XXI wieku podejście do IDE zaczęło się zmieniać. Coraz więcej
 
 Co ciekawe, STMicroelectronics w tamtym czasie nie posiadało własnego IDE. Potrzeba była tak duża, że właśnie na bazie Eclipse oddolnie rozwinął się projekt **Atollic** TrueSTUDIO, który z czasem został wchłonięty i rozbudowany, tworząc oficjalne **STM32CubeIDE** _(rys. 7)_. To doskonały przykład siły społeczności internetowej. Z podobnego rozwiązania skorzystało również NXP, rozwijając MCUXpresso na bazie Eclipse.
 
-Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_ [^14], wyróżniający się szybkością działania, intuicyjnością i otwartą architekturą. Jego lekka struktura zużywa mniej zasobów niż tradycyjne IDE, a rozbudowany ekosystem rozszerzeń umożliwia łatwą integrację z narzędziami do programowania systemów wbudowanych. Obecnie Arduino zrezygnowało z dalszego rozwoju własnego IDE, adaptując VSCode do swoich potrzeb, a **PlatformIO** również rozwija się dynamicznie _(rys. 7)_.
+Coraz większą popularność zdobywa **VSCode** _(Visual Studio Code)_[^14], wyróżniający się szybkością działania, intuicyjnością i otwartą architekturą. Jego lekka struktura zużywa mniej zasobów niż tradycyjne IDE, a rozbudowany ekosystem rozszerzeń umożliwia łatwą integrację z narzędziami do programowania systemów wbudowanych. Obecnie Arduino zrezygnowało z dalszego rozwoju własnego IDE, adaptując VSCode do swoich potrzeb, a **PlatformIO** również rozwija się dynamicznie _(rys. 7)_.
 
 ![rys.7](img/ide.png)
 > **Rysunek 7.** Ewolucja IDE uwzględniając ich względną popularność
 
 A Systematic Literature Review Exploring the Barriers and Challenges to Open Innovation within the Financial Service Industry
 
-[^11]: T. Nguyen, S. Zoëga Andreasen, A. Wolff, D. Duong Bang, **Open-Source Mikrosterowniki w Urządzeniach Lab-on-a-Chip, Micromachines**, 2018, `ISSN: 2072-666X`
-[^12]: A. Kalache, H. Lunnikivi, D. Timo, **Open-Source RISC-V Microcontroller for Rust-Based Hard Real-Time Systems, Tampere University**, 2024, `ISBN 9783031661464`
-[^13]: J. McLurkin, J. Rykowski, M. John, Q. Kaseman, A. J. Lynch, **Using Multi-Robot Systems for Engineering Education: Teaching and Outreach With Large Numbers of an Advanced, Low-Cost Robot**, IEEE, 2013, DOI: `10.1109/TE.2012.2222646`
-[^14]: A. Eliasz, **Zephyr RTOS Embedded C Programming**, Apress, 2024, `DOI: 10.1007/979-8-8688-0107-5`, `ISBN: 9798868801075`
+[^11]: T. Nguyen, S. Zoëga Andreasen, A. Wolff, D. Duong Bang; **Open-Source Mikrosterowniki w Urządzeniach Lab-on-a-Chip, Micromachines**. 2018, `ISSN: 2072-666X`
+[^12]: A. Kalache, H. Lunnikivi, D. Timo; **Open-Source RISC-V Microcontroller for Rust-Based Hard Real-Time Systems, Tampere University**. 2024, `ISBN 9783031661464`
+[^13]: J. McLurkin, J. Rykowski, M. John, Q. Kaseman, A. J. Lynch; **Using Multi-Robot Systems for Engineering Education: Teaching and Outreach With Large Numbers of an Advanced, Low-Cost Robot**. IEEE, 2013, DOI: `10.1109/TE.2012.2222646`
+[^14]: A. Eliasz; **Zephyr RTOS Embedded C Programming**. Apress, 2024, `DOI: 10.1007/979-8-8688-0107-5`, `ISBN: 9798868801075`
 
 ### Układy SoC
 
@@ -144,8 +144,8 @@ Najpopularniejszym SoC jest **ESP32**[^15] _(rys. 8a)_, które zdobyło uznanie 
 ![rys.8](img/esp32-nrf52.png)
 > **Rysunek 8.** Płyty rozwojowe (a) ESP32 (b) Nucleo nRF52
 
-[^15]: J. Soto-Cruz, E. Ruiz-Ibarra, J. Vázquez-Castillo, **A Survey of Efficient Lightweight Cryptography for Power-Constrained Microcontrollers**, Technologies, 2024, `DOI: 10.3390/technologies13010003`
-[^16]: R. B. Salikhov; V. Kh. Abdrakhmanov; T. T. Yumalin, **Experience of Using Bluetooth Low Energy to Develop a Sensor Data Exchange System Based on the NRF52832 Microcontroller**, IEEE, 2021, `DOI: 10.1109/UralCon52005.2021.9559492`
+[^15]: J. Soto-Cruz, E. Ruiz-Ibarra, J. Vázquez-Castillo; **A Survey of Efficient Lightweight Cryptography for Power-Constrained Microcontrollers**. Technologies, 2024, `DOI: 10.3390/technologies13010003`
+[^16]: R. B. Salikhov, V. Kh. Abdrakhmanov, T. T. Yumalin; **Experience of Using Bluetooth Low Energy to Develop a Sensor Data Exchange System Based on the NRF52832 Microcontroller**. IEEE, 2021, `DOI: 10.1109/UralCon52005.2021.9559492`
 
 ### Podsumowanie
 
@@ -194,18 +194,25 @@ Sterowniki **PLC** _(Programmable Logic Controllers)_ to programowalne urządzen
 
 Najpopularniejsze komercyjne sterowniki PLC, takie jak **Siemens S7-1200**, Wago 750-881 czy Allen-Bradley MicroLogix 1400, współpracują z dedykowanym oprogramowaniem umożliwiającym tworzenie i wgrywanie programów. W centrum każdego sterownika znajduje się mikrokontroler odpowiedzialny za obliczenia, sterowanie peryferiami i komunikację. Dedykowane środowiska programistyczne narzucają jednak pewne ograniczenia, pozwalając na korzystanie jedynie z funkcji i bloków dostarczonych przez producenta. Choć ułatwia to tworzenie przejrzystych programów, ogranicza dostęp do niższych warstw, co bywa problematyczne przy zaawansowanych zastosowaniach. Dodatkowo sterowniki danego producenta mogą być programowane wyłącznie w jego środowisku, co prowadzi do większej zależności od dostawcy, ogranicza elastyczność programistów i może negatywnie wpływać na konkurencyjność oraz innowacyjność rynku.
 
-Widać, że paradygmaty technologiczne w przypadku sterowników PLC są zupełnie inne niż w przypadku mikrokontrolerów, SoC i płytek programowalnych. Zamiast otwartości, sprzyjającej innowacyjnemu rozwojowi, priorytetem są niezawodność, długi cykl życia, odporność na warunki przemysłowe oraz bezpieczeństwo. Standardy i certyfikacje zapewniają stabilność i ochronę przed nieautoryzowanym dostępem, a łatwość serwisowania pozwala na modyfikacje programów bez przerywania pracy systemu. Nie oznacza to jednak, że ten trend się nie zmieni. Początkowo wiele rozwiązań opartych na mikrokontrolerach i płytkach rozwojowych miało podobny charakter jak współczesne sterowniki PLC. Świadczy o tym rosnąca popularność otwartych i warstwowych sterowników PLC, w których coraz częściej stosuje się systemy oparte na mikrokomputerach i modułach dostosowanych do standardów automatyki.
+Widać, że paradygmaty technologiczne w przypadku sterowników PLC są zupełnie inne niż w przypadku mikrokontrolerów, SoC i płytek programowalnych. Zamiast otwartości, sprzyjającej innowacyjnemu rozwojowi, priorytetem są niezawodność, długi cykl życia, odporność na warunki przemysłowe oraz bezpieczeństwo. Standardy i certyfikacje zapewniają stabilność i ochronę przed nieautoryzowanym dostępem, a łatwość serwisowania pozwala na modyfikacje programów bez przerywania pracy systemu[^17]. Nie oznacza to jednak, że ten trend się nie zmieni. Początkowo wiele rozwiązań opartych na mikrokontrolerach i płytkach rozwojowych miało podobny charakter jak współczesne sterowniki PLC. Świadczy o tym rosnąca popularność otwartych i warstwowych sterowników PLC, w których coraz częściej stosuje się systemy oparte na mikrokomputerach _(np. Raspberry Pi[^18])_ i modułach dostosowanych do standardów automatyki. Zapewniają one znacznie większą elastyczność oraz upraszczają integrację z systemami komputerowymi i infrastrukturą internetową _(Przemysł 4.0)_, znajdując zastosowanie tam, gdzie tradycyjne rozwiązania okazują się niewystarczające[^19].
 
 Dotychczas jednak żadne w pełni otwarte rozwiązanie, dedykowane prostszym i bardziej niezawodnym procesom i bazujące na bezpośrednim programowaniu mikrokontrolera, nie zdobyło większej popularności. Takie podejście mogłoby zapewnić wyższą stabilność, mniejsze zużycie energii i krótszy czas uruchamiania w porównaniu ze sterownikami opartymi na mikrokomputerach, co czyniłoby je atrakcyjnym wyborem w niektórych zastosowaniach przemysłowych, a z edukacyjnego punktu widzenia takie rozwiązanie pozwala nie tylko na naukę programowania PLC, ale także na zrozumienie działania sprzętu i warstw abstrakcji. Dzięki temu inżynierowie zdobywają praktyczne umiejętności pracy z mikrokontrolerami, optymalizacji kodu i integracji z automatyką. Otwartość platformy sprzyja eksperymentom, rozwija myślenie systemowe i eliminuje ograniczenia typowych zamkniętych środowisk.
 
+[^17]: M. Schilling; **Strategic Management of Technological Innovation**. McGraw-Hill Education, 2012, `ISBN: 9780078029233, 0078029236`
+[^18]: C.C. Andrei, G. Tudor, M. Arhip-Călin, G. Fierăscu, C Urcan; **Raspberry Pi, an Alternative Low-Cost PLC**, IEEE, 2022, `DOI: 10.1109/ISFEE51261.2020.9756175`
+[^19]: M. Khunnen, Benchaporn Jantarakongkul, Prajaks Jitngernmadan, Chalermpan Fongsamut; **User-centered Approach of Interactive HMI on PLCnext for Smart Factory Applications**. IEEE, 2024, `DOI: 10.1109/InCIT63192.2024.10810551`
+
 ### OpenCPLC
 
-Lukę na rynku może wypełnić projekt **OpenCPLC** _(https://github.com/OpenCPLC)_, który, mimo wczesnej fazy rozwoju, jest tworzony zgodnie z duchem otwartego oprogramowania. Wykorzystuje sprawdzone technologie, takie jak **język C**, środowisko VSCode wraz popularnymi wtyczkami, kompilator ARM GCC, OpenOCD do programowania i debugowania oraz system **VRTS** do obsługi wielowątkowości. Zamiast zamkniętych środowisk wprowadza warstwy abstrakcji zgodne ze standardami automatyki, zarówno w postaci bibliotek HAL, jak i dedykowanej konstrukcji sprzętowej. Oferuje aplikację **`wizard.exe`**, która przygotowuje niezbędne narzędzia do pracy oraz umożliwia pracę z workspace, poprzez płynne przełączanie się między projektami.
+Lukę na rynku może wypełnić projekt **OpenCPLC**[^20] _(https://github.com/OpenCPLC)_, który, mimo wczesnej fazy rozwoju, jest tworzony zgodnie z duchem otwartego oprogramowania. Wykorzystuje sprawdzone technologie, takie jak **język C**, środowisko VSCode wraz popularnymi wtyczkami, kompilator ARM GCC, OpenOCD do programowania i debugowania oraz system **VRTS**[^21] do obsługi wielowątkowości. Zamiast zamkniętych środowisk wprowadza warstwy abstrakcji zgodne ze standardami automatyki, zarówno w postaci bibliotek HAL, jak i dedykowanej konstrukcji sprzętowej. Oferuje aplikację **`wizard.exe`**, która przygotowuje niezbędne narzędzia do pracy oraz umożliwia pracę z workspace, poprzez płynne przełączanie się między projektami.
 
 Konstrukcja OpenCPLC Uno _(rys. 10)_ to pełnoprawny, niskobudżetowy sterownik PLC oparty na mikrokontrolerze STM32. Obsługuje napięcia 12V, 24V oraz 230VAC na wejściach cyfrowych **DI**, co pozwala na zastosowanie w maszynach przemysłowych, automatyce i systemach domowych. Jest wyposażony w przekaźniki **RO**, tranzystory **TO**, triaki oraz **RS485**, wspierając protokoły **Modbus RTU** i **BACnet**. Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się również jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach.
 
 ![rys.10](img/opencplc-uno.png)
 > **Rysunek 10.** Sterownik OpenCPLC Uno _(zdjęcie oraz model wektorowy z opisanymi peryferiami)_
+
+[^20]: E. Świtalski, K. Górecki; **Otwarte i warstwowe projektowanie sterowników PLC na przykładzie sterownika do zastosowań edukacyjnych**, Przegląd Elektrotechniczny, 2023, `doi:10.15199/48.2024.10.61`
+[^21]: E. Świtalski, K. Górecki; **System zwalniania wątków VRTS jako alternatywa dla RTOS**, Przegląd Elektrotechniczny, 2023, `DOI: 10.15199/48.2023.09.52`
 
 ### Wnioski końcowe
 
