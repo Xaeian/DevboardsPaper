@@ -167,9 +167,12 @@ Dotychczas jednak żadne w pełni otwarte rozwiązanie, dedykowane prostszym i b
 
 ### OpenCPLC
 
-Lukę na rynku może wypełnić projekt OpenCPLC _(https://github.com/OpenCPLC)_, który, mimo wczesnej fazy rozwoju, jest tworzony zgodnie z duchem otwartego oprogramowania. Wykorzystuje sprawdzone technologie, takie jak **język C**, środowisko VSCode wraz popularnymi wtyczkami, kompilator ARM GCC, OpenOCD do programowania i debugowania oraz system **VRTS** do obsługi wielowątkowości. Zamiast zamkniętych środowisk wprowadza warstwy abstrakcji zgodne ze standardami automatyki, zarówno w postaci bibliotek HAL, jak i dedykowanej konstrukcji sprzętowej. Oferuje aplikację **`wizard.exe`**, która przygotowuje niezbędne narzędzia do pracy oraz umożliwia pracę z workspace, poprzez płynne przełączanie się między projektami.
+Lukę na rynku może wypełnić projekt **OpenCPLC** _(https://github.com/OpenCPLC)_, który, mimo wczesnej fazy rozwoju, jest tworzony zgodnie z duchem otwartego oprogramowania. Wykorzystuje sprawdzone technologie, takie jak **język C**, środowisko VSCode wraz popularnymi wtyczkami, kompilator ARM GCC, OpenOCD do programowania i debugowania oraz system **VRTS** do obsługi wielowątkowości. Zamiast zamkniętych środowisk wprowadza warstwy abstrakcji zgodne ze standardami automatyki, zarówno w postaci bibliotek HAL, jak i dedykowanej konstrukcji sprzętowej. Oferuje aplikację **`wizard.exe`**, która przygotowuje niezbędne narzędzia do pracy oraz umożliwia pracę z workspace, poprzez płynne przełączanie się między projektami.
 
-Konstrukcja OpenCPLC to pełnoprawny, niskobudżetowy sterownik PLC oparty na mikrokontrolerze STM32. Obsługuje napięcia 12V, 24V oraz 230VAC na wejściach cyfrowych **DI**, co pozwala na zastosowanie w maszynach przemysłowych, automatyce i systemach domowych. Jest wyposażony w przekaźniki **RO**, tranzystory **TO**, triaki _(płytka Uno)_ oraz **RS485**, wspierając protokoły **Modbus RTU** i **BACnet**. Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się również jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach.
+Konstrukcja OpenCPLC Uno _(rys. 10)_ to pełnoprawny, niskobudżetowy sterownik PLC oparty na mikrokontrolerze STM32. Obsługuje napięcia 12V, 24V oraz 230VAC na wejściach cyfrowych **DI**, co pozwala na zastosowanie w maszynach przemysłowych, automatyce i systemach domowych. Jest wyposażony w przekaźniki **RO**, tranzystory **TO**, triaki oraz **RS485**, wspierając protokoły **Modbus RTU** i **BACnet**. Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się również jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach.
+
+![rys.10](img/opencplc-uno.png)
+Rysunek 10. Sterownik OpenCPLC Uno
 
 ### Wnioski końcowe
 
