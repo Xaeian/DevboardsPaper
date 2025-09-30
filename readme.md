@@ -29,8 +29,6 @@ W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane ukła
 
 W tamtych czasach płyty rozwojowe _(deweloperskie)_ nie były postrzegane jako narzędzia do nauki czy eksperymentowania, ale jako kluczowe narzędzia mające na celu usprawnienie realizacji konkretnych projektów inżynieryjnych, a ich funkcjonalność była zbliżona do samego mikrokontrolera.
 
-### Narodziny Mikroprocesorów
-
 Początek lat 70. to okres, w którym zaczęto rozwijać mikroprocesory. Jako pierwszy pojawił się 4-bitowy **Intel 4004** _(rys. 1a, rys. 2a)_[^3], który był jednostką arytmetyczno-logiczną _(ALU)_, wymagającym podłączenia dodatkowych układów zewnętrznych, takich jak kontrolery I/O, pamięci RAM i ROM. Programowanie odbywało się przez zapisywanie programu w pamięci ROM, która była trwale programowana w procesie produkcyjnym, a schematy logiki często były projektowane przy użyciu kart perforowanych.
 
 W kolejnych latach na rynku zaczęły pojawiać się bardziej zintegrowane układy, które można już było określić mianem mikrokontrolerów, gdyż zawierały zarówno pamięć **RAM**, jak i **ROM**, eliminując konieczność stosowania zewnętrznych modułów. Przykładami takich układów są **TMS 1000** od Texas Instruments oraz 8-bitowy **Intel 8048** _(rys. 1b, rys. 2b)_, wyposażony dodatkowo w **timer** sprzętowy. Układy programowane były w **asemblerze**, z wykorzystaniem prostych terminali. Zastosowanie pamięci **EEPROM** pozwoliło na wielokrotne programowanie bez wymiany układu, ułatwiając szybkie modyfikacje kodu.
@@ -200,17 +198,42 @@ Dotychczas jednak żadne w pełni otwarte rozwiązanie, dedykowane prostszym i b
 [^18]: C.C. Andrei, G. Tudor, M. Arhip-Călin, G. Fierăscu, C Urcan; **Raspberry Pi, an Alternative Low-Cost PLC**, IEEE, 2022, `DOI: 10.1109/ISFEE51261.2020.9756175`
 [^19]: M. Khunnen, Benchaporn Jantarakongkul, Prajaks Jitngernmadan, Chalermpan Fongsamut; **User-centered Approach of Interactive HMI on PLCnext for Smart Factory Applications**. IEEE, 2024, `DOI: 10.1109/InCIT63192.2024.10810551`
 
-### OpenCPLC
+### Projekt OpenCPLC
 
-Lukę na rynku może wypełnić projekt **OpenCPLC**[^20] _(https://github.com/OpenCPLC)_, który, mimo wczesnej fazy rozwoju, jest tworzony zgodnie z duchem otwartego oprogramowania. Wykorzystuje sprawdzone technologie, takie jak **język C**, środowisko VSCode wraz popularnymi wtyczkami, kompilator ARM GCC, OpenOCD do programowania i debugowania oraz system **VRTS**[^21] do obsługi wielowątkowości. Zamiast zamkniętych środowisk wprowadza warstwy abstrakcji zgodne ze standardami automatyki, zarówno w postaci bibliotek HAL, jak i dedykowanej konstrukcji sprzętowej. Oferuje aplikację **`wizard.exe`**, która przygotowuje niezbędne narzędzia do pracy oraz umożliwia pracę z workspace, poprzez płynne przełączanie się między projektami.
+Projekt **OpenCPLC**[^20] _(https://github.com/OpenCPLC)_ rozwijany jest jako otwartoźródłowa platforma łącząca świat płytek rozwojowych i sterowników PLC. Jego celem jest stworzenie narzędzia, które zachowuje stabilność i standardy przemysłowe, a jednocześnie pozostaje otwarte i modułowe jak klasyczne devboardy. Podstawą jest ekosystem repozytoriów GitHub, obejmujący m.in. pakiet narzędzi **`wizard.exe`**, framework _(biblioteki HAL, obsługa protokołów przemysłowych)_ i przykładowe aplikacje.
 
-Konstrukcja OpenCPLC Uno _(rys. 10)_ to pełnoprawny, niskobudżetowy sterownik PLC oparty na mikrokontrolerze STM32. Obsługuje napięcia 12V, 24V oraz 230VAC na wejściach cyfrowych **DI**, co pozwala na zastosowanie w maszynach przemysłowych, automatyce i systemach domowych. Jest wyposażony w przekaźniki **RO**, tranzystory **TO**, triaki oraz **RS485**, wspierając protokoły **Modbus RTU** i **BACnet**. Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się również jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach.
+Architektura systemu bazuje na języku **C**, kompilatorze ARM **GCC** oraz debugowaniu przez **OpenOCD**. Kluczowym elementem jest lekki system wielowątkowy **VRTS**[^21], który eliminuje konieczność synchronizacji pamięci, dzięki czemu jest znacznie bezpieczniejszy niż klasyczne **RTOS**-y. VRTS umożliwia realizację wielowątkowości bez użycia systemu operacyjnego, zapewnia błyskawiczny start i przewidywalne działanie w aplikacjach przemysłowych.
 
-![rys.10](img/opencplc-uno.png)
-> **Rysunek 10.** Sterownik OpenCPLC Uno _(zdjęcie oraz model wektorowy z opisanymi peryferiami)_
+W przeciwieństwie do tego podejścia, inne otwarte sterowniki, takie jak PLCnext czy Revolution Pi, opierają się na pełnych systemach operacyjnych _(Linux)_, co zwiększa ich elastyczność, ale wiąże się z typowymi ograniczeniami systemów operacyjnych:
+
+- **Długi start** – kilkanaście–kilkadziesiąt sekund po zaniku zasilania[^22].
+- **Zużycie zasobów** – kernel i procesy systemowe obciążają RAM/Flash i CPU[^23].
+- **Bezpieczeństwo** – trudno zapewnić, wymaga aktualizacji i specjalistycznej wiedzy[^24].
+- **Brak gwarancji czasowych** – brak pewnych reakcji na zdarzenia i dostęp do peryferiów przez sterowniki[^25].
+
+Kluczową rolę pełni `wizard.exe`, który automatyzuje konfigurację workspace, instalację narzędzi, przełączanie projektów i uruchamianie przykładów. Dzięki temu praca staje się prostsza i ustandaryzowana, podczas gdy ręczne przygotowanie środowiska wymagałoby dużego doświadczenia i było trudne do wykonania dla początkujących.
+
+Wszystkie sterowniki bazują na rodzinie STM32G0 i zostały zaprojektowane tak, aby w pełni wykorzystać potencjał mikrokontrolera. Mają ustandaryzowane wymiary dopasowane do montażu na szynie DIN. Wyposażono je w rozłączne terminale 5.0mm, co ułatwia instalacje oraz serwis. Cała linia została pomyślana jako spójna platforma, gdzie różne modele uzupełniają się funkcjonalnie, dzięki czemu można je łatwo łączyć w większe systemy _(rys. 10)_: 
+
+- **Uno** – uniwersalny, edukacyjno-demonstracyjny, sprawdzi się w małych projektach.
+- **Eco** – tani i kompaktowy, z potencjometrami do konfiguracji bez PC i napięciem referencyjnym 10V.
+- **Aio** – moduł rozszerzeń dla średnich/dużych systemów, wiele I/O, niezależne wyjścia tranzystorowe, kilka wejść analogowych.
+- **Dio** – jednostka główna lub rozszerzenie z dużą liczbą wejść/wyjść analogowych, stabilnym zasilaniem i napięciem ujemnym.
+
+Sterowniki OpenCPLC wyróżniają się możliwością pracy w środowiskach, gdzie typowe PLC zawodzą. Obsługują standardową automatykę 24VDC, ale także **12VDC**, typowe dla maszyn mobilnych w przemyśle _(np. budowlanym czy rolniczym)_. Umożliwiają pomiar napięcia zasilania, co ma znaczenie przy zasilaniu bezpośrednio z akumulatora. Przyjmują bezpośrednie sygnały **230VAC** na wejściach, co eliminuje konieczność stosowania dodatkowych modułów. Wyjścia **4A** pozwalają na sterowanie obciążeniami bezpośrednio.
+
+Otwarta architektura i zgodność z popularnymi narzędziami programistycznymi eliminują ograniczenia zamkniętych systemów. Dzięki temu sterownik sprawdza się jako platforma edukacyjna, pełniąc rolę płytki testowej i demonstracyjnej w laboratoriach, ale także w zastosowaniach przemysłowych, czego dowodem jest wdrożenie w maszynach mobilnych, gdzie wykorzystano je do sterowania zaworami hydraulicznymi[^26], co w przypadku typowych PLC byłoby droższe, wymagałoby większej liczby modułów rozszerzeń i pochłonęłoby znacznie więcej czasu na konfigurację.
 
 [^20]: E. Świtalski, K. Górecki; **Otwarte i warstwowe projektowanie sterowników PLC na przykładzie sterownika do zastosowań edukacyjnych**, Przegląd Elektrotechniczny, 2023, `doi:10.15199/48.2024.10.61`
-[^21]: E. Świtalski, K. Górecki; **System zwalniania wątków VRTS jako alternatywa dla RTOS**, Przegląd Elektrotechniczny, 2023, `DOI: 10.15199/48.2023.09.52`
+[^21]: E. Świtalski, K. Górecki; **System zwalniania wątków VRTS jako alternatywa dla RTOS**, Przegląd Elektrotechniczny, 2022, `doi:10.15199/48.2023.09.52`
+[^22]: Md. Farukh Hashmi, M. Pramod Kumar, K. S. Rao; **A Framework for Optimization of the Boot Time on Embedded Linux Environment with Raspberry Pi Platform**, IJCA, 2017. `doi:10.5120/ijca2017913304`
+[^23]: D. Chanet, B. de Sutter, B. De Bus, L. Van Put, K. de Bosschere, **Automated reduction of the memory footprint of the Linux kernel**, ACM SAC, 2007. `doi:10.1145/1274858.1274861`
+[^24]: K. Stouffer, M. Pease, C. Tang, T. Zimmerman, V. Pillitteri, S. Lightman, A. Hahn, S. Saravia, A. Sherule, M. Thompson, **Guide to Operational Technology _(OT)_ Security**, NIST SP 800-82, 2023, `doi:10.6028/NIST.SP.800-82r3`
+[^25]: M. M. Madden, **Challenges Using Linux as a Real-Time Operating System**, NASA _(NTRS)_
+[^26]: E. Świtalski, K. Górecki, K. Detka; **Sterowanie zaworami proporcjonalnymi w warunkach mobilnych**, Przegląd Elektrotechniczny, 2025, `doi:10.xxxxx/xx.xxxx`
+
+![rys.10](img/opencplc-controllers.png)
+> **Rysunek 10.** Sterowniki OpenCPLC. (a) Uno; (b) Eco; (c) Dio; (d) Aio.
 
 ### Wnioski końcowe
 
